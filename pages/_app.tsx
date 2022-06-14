@@ -3,6 +3,7 @@ import { Providers } from "@/Providers";
 import { Box, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import { Viewport } from "@/components";
+import { ErrorBoundary } from "@/errors/ErrorBoundary";
 
 const AppDevHint = () => {
   const envName =
@@ -80,10 +81,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Providers>
       <AppHead />
-      <Viewport>
-        <Component {...pageProps} />
-      </Viewport>
-      <AppDevHint />
+      <ErrorBoundary>
+        <Viewport>
+          <Component {...pageProps} />
+        </Viewport>
+        <AppDevHint />
+      </ErrorBoundary>
     </Providers>
   );
 }
