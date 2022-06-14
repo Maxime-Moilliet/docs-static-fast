@@ -3,7 +3,7 @@ import { Providers } from "@/Providers";
 import { Box, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import { Viewport } from "@/components";
-import { ErrorBoundary } from "@/errors/ErrorBoundary";
+import { ErrorBoundary } from "@/errors";
 
 const AppDevHint = () => {
   const envName =
