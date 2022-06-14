@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import { Providers } from "@/Providers";
 import { Box, Text } from "@chakra-ui/react";
 import Head from "next/head";
+import { Viewport } from "@/components";
 
 const AppDevHint = () => {
   const envName =
@@ -79,7 +80,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Providers>
       <AppHead />
-      <Component {...pageProps} />
+      <Viewport>
+        <Component {...pageProps} />
+      </Viewport>
       <AppDevHint />
     </Providers>
   );
