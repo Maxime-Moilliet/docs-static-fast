@@ -1,7 +1,13 @@
-import type { NextPage } from "next";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
-const Home: NextPage = () => {
-  return <div></div>;
+const Index = () => {
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/app");
+  }, [router]);
+
+  return <></>;
 };
 
-export default Home;
+export default Index;
