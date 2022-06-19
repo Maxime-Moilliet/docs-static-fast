@@ -1,8 +1,9 @@
-import { Button, Heading, Text, VStack } from "@chakra-ui/react";
+import { Button, Heading, Text, VStack, Link } from "@chakra-ui/react";
 import {
   DocsStaticConfigBannerType,
   DocsStaticConfigBasesType,
 } from "docs-static.types";
+import NextLink from "next/link";
 import React from "react";
 
 export const Banner: React.FC<{
@@ -17,9 +18,16 @@ export const Banner: React.FC<{
       <Text textAlign="center" fontSize="lg" py={5} color="white">
         {data.content}
       </Text>
-      <Button colorScheme="gray" size="lg">
-        {data.button}
-      </Button>
+      <NextLink href="/documentation" passHref>
+        <Button
+          as={Link}
+          colorScheme="gray"
+          size="lg"
+          style={{ textDecoration: "none" }}
+        >
+          {data.button}
+        </Button>
+      </NextLink>
     </VStack>
   );
 };

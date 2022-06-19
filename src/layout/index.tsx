@@ -9,7 +9,7 @@ export const Layout: React.FC<React.PropsWithChildren<unknown>> = ({
   return (
     <>
       <Header />
-      <VStack mt={16} as="main" minH="100vh" alignItems="stretch" w="full">
+      <VStack mt={16} as="main" minH="90vh" alignItems="stretch" w="full">
         {children}
       </VStack>
       <Footer />
