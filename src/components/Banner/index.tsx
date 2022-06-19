@@ -18,7 +18,7 @@ export const Banner: React.FC<{
       <Text textAlign="center" fontSize="lg" py={5} color="white">
         {data.content}
       </Text>
-      <NextLink href="/documentation" passHref>
+      <NextLink href="/docs" passHref>
         <Button
           as={Link}
           colorScheme="gray"

@@ -26,7 +26,7 @@ export const Header = () => {
             </Heading>
           </NextLink>
           <HStack as={"nav"} spacing={4}>
-            <NextLink href="/documentation" passHref>
+            <NextLink href="/docs" passHref>
               <Link
                 fontSize="15px"
                 fontWeight="500"
