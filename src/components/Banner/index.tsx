@@ -1,22 +1,21 @@
 import { Button, Heading, Text, VStack } from "@chakra-ui/react";
-import docsStaticConfig from "docs-static.config";
+import { DocsStaticConfigBannerType } from "docs-static.types";
 import React from "react";
 
-export const Banner = () => {
+export const Banner: React.FC<{
+  data: DocsStaticConfigBannerType;
+}> = ({ data }) => {
   return (
-    <VStack
-      as="section"
-      py={20}
-      spacing={8}
-      bg={docsStaticConfig.banner.backgroundColor}
-    >
+    <VStack as="section" py={16} spacing={8} bg="green.400">
       <Heading as="h1" size="3xl" color="white">
-        {docsStaticConfig.banner.title}
+        {data.title}
       </Heading>
-      <Text fontSize="lg" color="white">
-        {docsStaticConfig.banner.content}
+      <Text fontSize="lg" py={5} color="white">
+        {data.content}
       </Text>
-      <Button size="lg">{docsStaticConfig.banner.button}</Button>
+      <Button colorScheme="gray" size="lg">
+        {data.button}
+      </Button>
     </VStack>
   );
 };
