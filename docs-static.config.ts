@@ -1,6 +1,9 @@
 import { DocsStaticConfigType } from "docs-static.types";
 
 const docsStaticConfig: DocsStaticConfigType = {
+  bases: {
+    theme: ["error"],
+  },
   home: {
     banner: {
       title: "Docs static fast",

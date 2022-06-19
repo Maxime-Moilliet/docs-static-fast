@@ -3,5 +3,10 @@ import docsStaticConfig from "docs-static.config";
 import React from "react";
 
 export const HomePage = () => {
-  return <Banner data={docsStaticConfig.home.banner} />;
+  return (
+    <Banner
+      data={docsStaticConfig.home.banner}
+      theme={docsStaticConfig.bases.theme}
+    />
+  );
 };
