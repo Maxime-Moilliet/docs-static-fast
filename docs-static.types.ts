@@ -1,9 +1,7 @@
 import { colors } from "@/theme/foundations/colors";
 
-const colorsKeys = Object.keys(colors);
-
 export type DocsStaticConfigBasesType = {
-  theme: typeof colorsKeys;
+  theme: keyof typeof colors;
 };
 
 export type DocsStaticConfigBannerType = {

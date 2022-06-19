@@ -2,7 +2,7 @@ import { DocsStaticConfigType } from "docs-static.types";
 
 const docsStaticConfig: DocsStaticConfigType = {
   bases: {
-    theme: ["green"],
+    theme: "green",
   },
   home: {
     banner: {

@@ -14,4 +14,4 @@ export const colors = {
   orange: customColors.orange,
   red: customColors.red,
   gray: customColors.gray,
-};
+} as const;
