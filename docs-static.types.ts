@@ -10,9 +10,15 @@ export type DocsStaticConfigBannerType = {
   button: string;
 };
 
+type DocsStaticConfigCardsType = {
+  title: string;
+  content: string;
+};
+
 export type DocsStaticConfigType = {
   bases: DocsStaticConfigBasesType;
   home: {
     banner: DocsStaticConfigBannerType;
+    cards?: DocsStaticConfigCardsType[];
   };
 };
