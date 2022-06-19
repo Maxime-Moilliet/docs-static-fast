@@ -2,13 +2,13 @@ import { DocsStaticConfigType } from "docs-static.types";
 
 const docsStaticConfig: DocsStaticConfigType = {
   bases: {
-    theme: "green",
+    theme: "cyan",
   },
   home: {
     banner: {
       title: "Docs static fast",
       content: "Create your custom documentation fast with Docs static fast.",
-      button: "Get started",
+      button: "Get started !",
     },
     cards: [
       {

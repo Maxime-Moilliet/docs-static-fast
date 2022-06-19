@@ -4,6 +4,7 @@ import { Box, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import { Viewport } from "@/components";
 import { ErrorBoundary } from "@/errors";
+import { Layout } from "@/layout";
 
 const AppDevHint = () => {
   const envName =
@@ -79,7 +80,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <AppHead />
       <ErrorBoundary>
         <Viewport>
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </Viewport>
         <AppDevHint />
       </ErrorBoundary>
