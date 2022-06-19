@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 
 import { Error404 } from "@/errors";
+import { Layout } from "@/layout";
 
 const Page404 = () => {
   return (
