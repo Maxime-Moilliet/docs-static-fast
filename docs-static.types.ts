@@ -10,7 +10,7 @@ export type DocsStaticConfigBannerType = {
   button: string;
 };
 
-type DocsStaticConfigCardsType = {
+export type DocsStaticConfigCardsType = {
   title: string;
   content: string;
 };

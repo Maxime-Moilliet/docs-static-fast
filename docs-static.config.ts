@@ -39,7 +39,7 @@ const docsStaticConfig: DocsStaticConfigType = {
       {
         title: "📱 React Native compatible",
         content:
-          "Don't duplicate your logic between display and validation. Validation is enabled only if the field is displayed.",
+          "Typescript give you nice types out of the box. Hooks cut the complexity to create custom fields. Use complex logic without even thinking of it.",
       },
     ],
   },
