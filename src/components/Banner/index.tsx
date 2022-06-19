@@ -10,7 +10,7 @@ export const Banner: React.FC<{
   theme: Omit<DocsStaticConfigBasesType, "theme">;
 }> = ({ data, theme }) => {
   return (
-    <VStack as="section" py={16} spacing={8} bg={theme + ".500"}>
+    <VStack as="section" py={16} spacing={8} bg={`${theme}.500`}>
       <Heading as="h1" size="3xl" color="white">
         {data.title}
       </Heading>
