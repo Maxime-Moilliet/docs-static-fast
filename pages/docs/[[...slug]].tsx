@@ -4,7 +4,6 @@ import { allPages, Page } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
 import { Box, Container, HStack } from "@chakra-ui/react";
-import docsStaticConfig from "docs-static.config";
 import { Nav } from "@/components";
 
 export async function getStaticProps({ params: { slug = [] } }) {

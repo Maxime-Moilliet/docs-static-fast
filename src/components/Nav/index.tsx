@@ -15,9 +15,9 @@ export const Nav = () => {
         w="270px"
         py={6}
       >
-        {docsStaticConfig.docs.nav.map((el) =>
+        {docsStaticConfig.docs.nav.map((el, idx) =>
           el?.children?.length ? (
-            <Box key={el.name}>
+            <Box key={idx}>
               <Text
                 fontSize="md"
                 fontWeight="semibold"
@@ -28,13 +28,13 @@ export const Nav = () => {
                 {el.name}
               </Text>
               <VStack alignItems="left" spacing={2}>
-                {el.children.map((v) => (
+                {el.children.map((v, id) => (
                   <Link
                     href={`/docs${v.to}`}
                     fontSize="sm"
                     color="gray.500"
                     fontWeight="300"
-                    key={v.name}
+                    key={id}
                     _hover={{ textDecor: "none", color: "gray.700" }}
                   >
                     {v.name}
@@ -46,7 +46,7 @@ export const Nav = () => {
             <Link
               mb={3}
               href={`/docs${el.to}`}
-              key={el.name}
+              key={idx}
               fontSize="sm"
               color="gray.500"
               _hover={{
