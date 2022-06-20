@@ -6,6 +6,8 @@ import { Viewport } from "@/components";
 import { ErrorBoundary } from "@/errors";
 import { Layout } from "@/layout";
 
+import "styles/styles.css";
+
 const AppDevHint = () => {
   const envName =
     process.env.NODE_ENV === "development"

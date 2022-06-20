@@ -12,7 +12,7 @@ export const Layout: React.FC<React.PropsWithChildren<unknown>> = ({
       <VStack mt={16} as="main" minH="90vh" alignItems="stretch" w="full">
         {children}
       </VStack>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

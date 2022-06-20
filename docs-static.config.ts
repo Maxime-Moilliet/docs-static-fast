@@ -1,5 +1,7 @@
 import { DocsStaticConfigType } from "docs-static.types";
 
+import { FaBook, FaTools, FaUserAlt } from "react-icons/fa";
+
 const docsStaticConfig: DocsStaticConfigType = {
   bases: {
     theme: "cyan",
@@ -40,6 +42,130 @@ const docsStaticConfig: DocsStaticConfigType = {
         title: "📱 React Native compatible",
         content:
           "Typescript give you nice types out of the box. Hooks cut the complexity to create custom fields. Use complex logic without even thinking of it.",
+      },
+    ],
+  },
+  docs: {
+    nav: [
+      {
+        name: "Started",
+        to: "/",
+        icon: FaTools,
+      },
+      {
+        name: "Install",
+        to: "/",
+        icon: FaUserAlt,
+      },
+      {
+        name: "Developpement",
+        to: "/",
+        icon: FaBook,
+      },
+      {
+        name: "Getting started",
+        children: [
+          {
+            name: "Lorem markdownum",
+            to: "/getting-started/step-1",
+          },
+          {
+            name: "Moriens est deseruere",
+            to: "/getting-started/step-2",
+          },
+        ],
+      },
+      {
+        name: "Getting started",
+        children: [
+          {
+            name: "Est le faux texte",
+            to: "/getting-started/step-1",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+        ],
+      },
+      {
+        name: "Getting started",
+        children: [
+          {
+            name: "Est le faux texte",
+            to: "/getting-started/step-1",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Est le faux texte",
+            to: "/getting-started/step-1",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Est le faux texte",
+            to: "/getting-started/step-1",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+        ],
+      },
+      {
+        name: "Getting started",
+        children: [
+          {
+            name: "Est le faux texte",
+            to: "/getting-started/step-1",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+        ],
+      },
+      {
+        name: "Getting started",
+        children: [
+          {
+            name: "Est le faux texte",
+            to: "/getting-started/step-1",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+          {
+            name: "Page avant impression",
+            to: "/getting-started/step-2",
+          },
+        ],
       },
     ],
   },

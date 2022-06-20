@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
 import React from "react";
-import { allPages, Page, allDocuments } from "contentlayer/generated";
+import { allPages, Page } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
+import { Box, Container, HStack } from "@chakra-ui/react";
+import docsStaticConfig from "docs-static.config";
+import { Nav } from "@/components";
 
 export async function getStaticProps({ params: { slug = [] } }) {
   const pagePath = "/docs/" + slug.join("/");
@@ -23,27 +26,20 @@ export async function getStaticPaths() {
 const Docs: NextPage<{ page: Page }> = ({ page }) => {
   const MdxBody = useMDXComponent(page.body.code);
 
-  console.log(allPages);
-
   return (
     <div>
       <Head>
         <title>{page.title}</title>
       </Head>
 
-      <main>
-        <MdxBody />
-      </main>
-
-      <aside>
-        <ul>
-          {allPages.map((page) => (
-            <a key={page._id} href={`/docs/${page._raw.flattenedPath}`}>
-              {page.title}
-            </a>
-          ))}
-        </ul>
-      </aside>
+      <Container as="main" maxW="6xl">
+        <HStack gap={6} alignItems="flex-start">
+          <Nav />
+          <Box py={16} px={8} className="docs-content">
+            <MdxBody />
+          </Box>
+        </HStack>
+      </Container>
     </div>
   );
 };
